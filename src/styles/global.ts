@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -9,12 +9,12 @@ export const GlobalStyle = createGlobalStyle`
 
   :focus {
     outline: 0;
-    box-sizing: 0 0 0 2px ${props => props.theme["green-500"]};
+    box-sizing: 0 0 0 2px ${(props) => props.theme['green-500']};
   }
 
   body{
-    background-color: ${props => props.theme["gray-800"]};
-    color: ${props => props.theme["gray-100"]};
+    background-color: ${(props) => props.theme['gray-800']};
+    color: ${(props) => props.theme['gray-100']};
     -webkit-font-smoothing: antialiased;
   }
 
@@ -24,5 +24,10 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
   }
 `
